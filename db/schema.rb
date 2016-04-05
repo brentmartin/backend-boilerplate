@@ -17,25 +17,33 @@ ActiveRecord::Schema.define(version: 20160405202840) do
   enable_extension "plpgsql"
 
   create_table "schools", force: :cascade do |t|
-    t.string   "name"        null: false
-    t.string   "motto"       null: false
-    t.string   "location"    null: false
+    t.string   "name"
+    t.string   "motto"
+    t.string   "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "students", force: :cascade do |t|
-    t.string   "name"        null: false
-    t.integer  "age"         null: false
+    t.string   "name"
+    t.integer  "age"
+    t.integer  "school_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  add_index "students", ["school_id"], name: "index_students_on_school_id", using: :btree
 
   create_table "teachers", force: :cascade do |t|
-    t.string   "name"        null: false
-    t.integer  "age"         null: false
+    t.string   "name"
+    t.integer  "age"
+    t.integer  "school_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  add_index "teachers", ["school_id"], name: "index_teachers_on_school_id", using: :btree
+
+  add_foreign_key "students", "schools"
+  add_foreign_key "teachers", "schools"
 end
