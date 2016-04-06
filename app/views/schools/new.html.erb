@@ -1,2 +1,7 @@
-<h1>Schools#new</h1>
-<p>Find me in app/views/schools/new.html.erb</p>
+<h1>New School!</h1>
+
+<%= form_for @school do |f| %>
+<%= f.text_field :name %>
+<%= f.text_field :motto %>
+<%= f.text_field :location %>
+<% end %>

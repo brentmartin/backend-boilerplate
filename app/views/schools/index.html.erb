@@ -1,2 +1,31 @@
-<h1>Schools#index</h1>
-<p>Find me in app/views/schools/index.html.erb</p>
+<h1>Schools Dashboard <small>Welcome district manager</small></h1>
+
+
+<% @schools.each do |school| %>
+  <h2>
+    
+    <%= school.name %>
+  </h2>
+  <p>
+    Located:
+    <%= school.location %>
+  </p>
+  <p>
+    School Motto:
+    <%= school.motto %>
+  </p>
+  <p>
+    School ID:
+    <%= school.id %>
+  </p>
+  <p>
+    Number of teachers:
+    <%= school.teachers.count %>
+  </p>
+  <p>
+    Number of students:
+    <%= school.students.count %>
+  </p>
+
+
+<% end %>
