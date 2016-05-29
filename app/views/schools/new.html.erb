@@ -1,7 +1,8 @@
 <h1>New School!</h1>
 
 <%= form_for @school do |f| %>
-<%= f.text_field :name %>
-<%= f.text_field :motto %>
-<%= f.text_field :location %>
+<p>School Name <%= f.text_field :name %> </p>
+<p>School Motto: <%= f.text_field :motto %> </p>
+<p>School Location: <%= f.text_field :location %> </p>
+<p><%= f.submit :create %></p>
 <% end %>
