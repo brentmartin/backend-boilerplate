@@ -43,10 +43,19 @@ html {
       text-shadow: 0 .5px 6px rgba(0, 0, 0, 0.1);
     }
   }
+
+  // BODY styles
+  body {
+    background-color: #fafafa;
+
+    section {
+      @include outer-container;
+      aside { @include span-columns(2);
+              @include shift(1); }
+      article { @include span-columns(8); }
+    }
   }
 }
-body {
-  background-color: #fafafa;
 
 // NAVIGATION styles
 .navigation-centered {
