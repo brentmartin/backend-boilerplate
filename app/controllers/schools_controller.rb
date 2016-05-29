@@ -38,24 +38,18 @@ class SchoolsController < ApplicationController
     end
   end
 
+  def show # GET /schools/:id
+    @school = School.find(params[:id])
+  end
 
+  def edit # GET /schools/:id/edit
+    @school = School.find(params[:id])
+  end
 
-  # def show # GET /schools/:id
-  #   @school = School.find(params[:id])
-  # end
-
-
-
-  # def edit # GET /schools/:id/edit
-  #   @school = School.find(params[:id])
-  # end
-
-
-  #
-  # def update # PUT /schools/:id
-  #   @school = School.find(params[:id])
-  #   #Do update
-  # end
+  def update # PUT /schools/:id
+    @school = School.find(params[:id])
+    #Do update
+  end
 
 
 
