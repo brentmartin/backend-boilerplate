@@ -1,16 +1,23 @@
 <h1>Teachers#show</h1>
 <p>Find me in app/views/teachers/show.html.erb</p>
 body>
+
   <span id="teacher-show-display">
+    <h1><%= @teacher.name %></h1>
   </span>
+
   <section class="content-left">
     <div id="teacher-show-students">
       <article>
       </article>
       <aside>
         <div class='side-items'>
+          <small>Welcome Professor!</small>
+          <p>Number of students: <%= @teacher.students.count %></p>
         </div>
       </aside>
     </div>
+
   </section>
+
 </body>
