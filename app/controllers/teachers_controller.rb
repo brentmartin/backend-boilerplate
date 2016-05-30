@@ -16,7 +16,7 @@ class TeachersController < ApplicationController
     @teacher = Teacher.new(teacher_params)
 
     if @teacher.save
-      redirect_to teacher_path(@teacher.id), notice: "Success!"
+      redirect_to school_path(@teacher.school_id), notice: "Success!"
     else
       flash[:alert] = "Error Occured! School couldn't be saved!"
       render :new
