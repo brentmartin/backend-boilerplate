@@ -1,4 +1,3 @@
-
 <body>
 
   <span id="school-index-display">
@@ -8,10 +7,12 @@
   <section class="content-right">
     <aside>
       <div class='side-items'>
-        <small>Welcome district manager</small>
-        <a href="#"><h3 class="arrow">></h3><h3>Schools</h3></a>
-        <a href="#"><h3 class="arrow">></h3><h3>Students</h3></a>
-        <a href="#"><h3 class="arrow">></h3><h3>Teachers</h3></a>
+
+        <p class="read-more">Welcome Admin</p>
+        <%= form_for(:school, :url => {:action => 'create'}) do |f| %>
+          <% render(:partial => "form", :locals => {:f => f}) %>
+        <% end %>
+
       </div>
     </aside>
 
