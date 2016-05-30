@@ -4,7 +4,6 @@ class TeachersController < ApplicationController
     @teachers = Teacher.all
   end
 
-  def show
   def new
     @teacher = Teacher.new
   end
@@ -22,6 +21,9 @@ class TeachersController < ApplicationController
       render :new
     end
   end
+
+  def show # GET /schools/:id
+    @teacher = Teacher.find(params[:id])
   end
 
   def edit
