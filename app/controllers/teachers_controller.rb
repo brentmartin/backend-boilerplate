@@ -5,9 +5,23 @@ class TeachersController < ApplicationController
   end
 
   def show
+  def new
+    @teacher = Teacher.new
   end
 
-  def new
+  def create
+    @teacher = Teacher.new
+    @teacher.name = params[:teacher][:name]
+    @teacher.age = params[:teacher][:age]
+    @teacher.school_id = params[:teacher][:school_id]
+
+    if @teacher.save
+      redirect_to teacher_path(@teacher.id), notice: "Success!"
+    else
+      flash[:alert] = "Error Occured! School couldn't be saved!"
+      render :new
+    end
+  end
   end
 
   def edit
