@@ -13,10 +13,7 @@ class TeachersController < ApplicationController
   end
 
   def create
-    @teacher = Teacher.new
-    @teacher.name = params[:teacher][:name]
-    @teacher.age = params[:teacher][:age]
-    @teacher.school_id = params[:teacher][:school_id]
+    @teacher = Teacher.new(teacher_params)
 
     if @teacher.save
       redirect_to teacher_path(@teacher.id), notice: "Success!"
@@ -26,6 +23,10 @@ class TeachersController < ApplicationController
     end
   end
 
+  private
 
+  def teacher_params
+    params.require(:teacher).permit(:id, :name, :age, :school_id)
   end
+
 end
