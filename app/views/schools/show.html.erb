@@ -17,6 +17,8 @@
         <div class='side-items'>
           <small>Welcome district manager</small>
           <p>Number of teachers: <%= @school.teachers.count %></p>
+          <p>Number of students: <%= @school.students.count %></p>
+      </aside>
     <div id="school-show-teachers">
       <article>
         <% @school.teachers.each do |teacher| %>
@@ -39,9 +41,39 @@
               </div>
           <hr style='border: none;' />
         <% end %>
+      </article>
+      <aside>
         <div class='side-items'>
         </div>
       </aside>
+    <div id="school-show-students">
+      <article>
+        <% @school.students.each do |student| %>
+              <div class='items'>
+                <h2>
+                  <%= student.name %>
+                </h2>
+                <p>
+                  Age:
+                  <%= student.age %>
+                </p>
+                <p>
+                  Student ID:
+                  <code><%= student.id %></code>
+                </p>
+                <p>
+                  School ID:
+                  <code><%= student.school_id %></code>
+                </p>
+                <p>
+                  Teacher ID:
+                  <code><%= student.teacher_id %></code>
+                </p>
+              </div>
+          <hr style='border: none;' />
+        <% end %>
+      </article>
+      <aside>
         </div>
       </aside>
     </div>
