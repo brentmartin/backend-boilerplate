@@ -7,18 +7,21 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-6.times do
+5.times do
   school = School.create!(name: Faker::Company.name + " School",
                           motto: Faker::Company.catch_phrase,
                           location: Faker::Address.city)
 
-  rand(20..50).times do
-    Student.create!(name: Faker::Name.name, age: rand(18..50), school_id: school.id)
-  end
-
-  rand(1..8).times do
-    teacher = Teacher.create!(name: Faker::Name.name,
+  rand(2..4).times do
+    teacher = Teacher.create!(name: "Professor " + Faker::Name.name,
                               age: rand(19..99),
                               school_id: school.id)
+
+    rand(4..10).times do
+      Student.create!(name: Faker::Name.name,
+                      age: rand(18..50),
+                      school_id: school.id,
+                      teacher_id: teacher.id)
+    end
   end
 end
