@@ -9,10 +9,7 @@ class SchoolsController < ApplicationController
   end
 
   def create
-    @school = School.new
-    @school.name = params[:school][:name]
-    @school.motto = params[:school][:motto]
-    @school.location = params[:school][:location]
+    @school = School.new(school_params)
 
     if @school.save
       redirect_to school_path(@school.id), notice: "Success!"
@@ -26,7 +23,10 @@ class SchoolsController < ApplicationController
     @school = School.find(params[:id])
   end
 
+  private
 
+  def school_params
+    params.require(:school).permit(:id, :name, :motto, :location)
   end
 
 end
