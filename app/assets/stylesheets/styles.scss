@@ -223,7 +223,50 @@ html {
   }
 
   .side-items {
+    padding: 0 1em 0 1em;
+    border-style: solid;
+    border-width: 0.5px 0.5px 0.5px 0.5px;
+    border-color: #e9e9e9;
+    z-index: 0;
+    box-shadow: 0 .5px 6px rgba(0, 0, 0, 0.05);
+    border-radius: 3px;
+    background-color: #ffffff;
+    transition: all 200ms linear;
+    p input {
+      border-radius: 6px;
+      border-style: solid;
+      border-width: 0.5px 0.5px 0.5px 0.5px;
+      border-color: #e9e9e9;
+      background-color: #fafafa;
+      z-index: 0;
+      box-shadow: none;
+      margin-top: 1em;
+      &:focus {
+        border-style: solid;
+        border-width: 0.5px 0.5px 0.5px 0.5px;
+        border-color: #ffffff;
+        background-color: #666666;
+        color: #ffffff;
+        z-index: 0;
+        box-shadow: none;
+        transition: all 50ms linear;
       }
+    }
+    input {
+      border-style: solid;
+      border-width: 0.5px 0.5px 0.5px 0.5px;
+      border-color: #e9e9e9;
+      background-color: #ffffff;
+      z-index: 0;
+      box-shadow: none;
+      &:focus {
+        border-style: solid;
+        border-width: 0.5px 0.5px 0.5px 0.5px;
+        border-color: #bdbdbd;
+        background-color: #ffffff;
+        z-index: 0;
+        box-shadow: none;
+        transition: all 200ms linear;
       }
     }
   }
