@@ -15,6 +15,33 @@
       </article>
       <aside>
         <div class='side-items'>
+          <small>Welcome district manager</small>
+          <p>Number of teachers: <%= @school.teachers.count %></p>
+    <div id="school-show-teachers">
+      <article>
+        <% @school.teachers.each do |teacher| %>
+              <div class='items'>
+                <h2>
+                  <%= teacher.name %>
+                </h2>
+                <p>
+                  Age:
+                  <%= teacher.age %>
+                </p>
+                <p>
+                  Teacher ID:
+                  <code><%= teacher.id %></code>
+                </p>
+                <p>
+                  School ID:
+                  <code><%= teacher.school_id %></code>
+                </p>
+              </div>
+          <hr style='border: none;' />
+        <% end %>
+        <div class='side-items'>
+        </div>
+      </aside>
         </div>
       </aside>
     </div>
