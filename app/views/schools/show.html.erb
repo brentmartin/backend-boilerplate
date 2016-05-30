@@ -18,7 +18,10 @@
           <small>Welcome district manager</small>
           <p>Number of teachers: <%= @school.teachers.count %></p>
           <p>Number of students: <%= @school.students.count %></p>
+        </div>
       </aside>
+    </div>
+
     <div id="school-show-teachers">
       <article>
         <% @school.teachers.each do |teacher| %>
@@ -44,8 +47,12 @@
       </article>
       <aside>
         <div class='side-items'>
+          <small>Welcome district manager</small>
+          <h2><%= link_to "Create new teacher", new_teacher_path(school_id: @school.id) %></h2>
         </div>
       </aside>
+    </div>
+
     <div id="school-show-students">
       <article>
         <% @school.students.each do |student| %>
@@ -74,6 +81,9 @@
         <% end %>
       </article>
       <aside>
+        <div class='side-items'>
+          <small>Welcome district manager</small>
+          <h2><%= link_to "Create new student", new_student_path(school_id: @school.id) %></h2>
         </div>
       </aside>
     </div>
