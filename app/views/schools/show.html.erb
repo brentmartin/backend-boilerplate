@@ -1,5 +1,3 @@
-<p>School Motto: <%= @school.motto %> </p>
-<p>School Location: <%= @school.location %> </p>
 <body>
 
   <span id="school-show-display">
@@ -7,9 +5,12 @@
   </span>
 
   <section class="content-left">
+
     <div id="school-show-info">
       <article>
         <div class='items'>
+          <p>School Motto: <%= @school.motto %></p>
+          <p>School Location: <%= @school.location %></p>
         </div>
       </article>
       <aside>
@@ -17,5 +18,7 @@
         </div>
       </aside>
     </div>
+
   </section>
+
 </body>
