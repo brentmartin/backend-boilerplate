@@ -1,2 +1,8 @@
-<h1>Teachers#new</h1>
-<p>Find me in app/views/teachers/new.html.erb</p>
+<h1>New Teacher!</h1>
+
+<%= form_for @teacher do |f| %>
+<p>Teacher Name: <%= f.text_field :name %> </p>
+<p>Teacher Age: <%= f.text_field :age %> </p>
+<p>School ID: <%= f.text_field :school_id %> </p>
+<p><%= f.submit :create %></p>
+<% end %>
