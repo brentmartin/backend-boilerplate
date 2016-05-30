@@ -26,13 +26,7 @@ class SchoolsController < ApplicationController
     @school = School.find(params[:id])
   end
 
-  def edit # GET /schools/:id/edit
-    @school = School.find(params[:id])
-  end
 
-  def update # PUT /schools/:id
-    @school = School.find(params[:id])
-    #Do update
   end
 
 end
