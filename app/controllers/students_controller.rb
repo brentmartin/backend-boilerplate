@@ -12,11 +12,7 @@ class StudentsController < ApplicationController
   end
 
   def create
-    @student = Student.new
-    @student.name = params[:student][:name]
-    @student.age = params[:student][:age]
-    @student.school_id = params[:student][:school_id]
-    @student.teacher_id = params[:student][:teacher_id]
+    @student = Student.new(student_params)
 
     if @student.save
       redirect_to student_path(@student.id), notice: "Success!"
@@ -25,6 +21,11 @@ class StudentsController < ApplicationController
       render :new
     end
   end
+  
+  private
 
+  def student_params
+    params.require(:student).permit(:id, :name, :age, :school_id, :teacher_id)
   end
+
 end
