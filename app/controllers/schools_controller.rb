@@ -1,27 +1,11 @@
 class SchoolsController < ApplicationController
+
   def index
     @schools = School.all
-    # respond_to do |format|
-    #   format.html
-    #   format.json do
-    #     render json: @schools.to_json
-    #   end
-    #   format.text do
-    #     render text: @schools.inspect
-    #   end
-    # end
   end
 
   def new
     @school = School.new
-
-    #To not use instance variables, you need to render the data explicitly as a local varaible into the view.
-    # render locals: {
-    #   school: School.new
-    # }
-
-    # By default rails renders the template of the same name as this action
-
   end
 
   def create
@@ -50,13 +34,5 @@ class SchoolsController < ApplicationController
     @school = School.find(params[:id])
     #Do update
   end
-
-
-
-  # def destroy # DELETE /schools/:id
-  #   @school = School.find(params[:id])
-  #   @school.destroy
-  # end
-
 
 end
