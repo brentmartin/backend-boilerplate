@@ -17,28 +17,31 @@
 
     <article>
       <% @schools.each do |school| %>
-      <div class='items'>
-        <h2>
-          <%= school.name %>
-          <small class="location"><%= school.location %></small>
-        </h2>
-        <p>
-          School Motto:
-          <%= school.motto %>
-        </p>
-        <p>
-          School ID:
-          <%= school.id %>
-        </p>
-        <p>
-          Number of teachers:
-          <%= school.teachers.count %>
-        </p>
-        <p>
-          Number of students:
-          <%= school.students.count %>
-        </p>
-      </div>
+        <%= link_to school_path(id: school.id), :class => 'button white' do %>
+            <div class='items'>
+              <h2>
+                <%= school.name %>
+                <small class="location"><%= school.location %></small>
+              </h2>
+              <p>
+                School Motto:
+                <%= school.motto %>
+              </p>
+              <p>
+                School ID:
+                <%= school.id %>
+              </p>
+              <p>
+                Number of teachers:
+                <%= school.teachers.count %>
+              </p>
+              <p>
+                Number of students:
+                <%= school.students.count %>
+              </p>
+            </div>
+        <hr style='border: none;' />
+        <% end %>
       <% end %>
       <hr style='border: none;' />
     </article>
