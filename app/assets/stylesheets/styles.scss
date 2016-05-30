@@ -200,7 +200,7 @@ html {
                 @include shift(1); }
     }
   }
-  
+
   .items {
     padding-left: 1em;
     border-style: solid;
@@ -223,15 +223,7 @@ html {
   }
 
   .side-items {
-    a {
-      h3 {
-        display: inline;
       }
-      &:hover {
-        .arrow {
-          color: #000000;
-          text-shadow: 0 .5px 6px rgba(0, 0, 0, 0.1);
-        }
       }
     }
   }
