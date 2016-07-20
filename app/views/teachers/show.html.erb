@@ -1,4 +1,4 @@
-body>
+<body>
 
   <span id="teacher-show-display">
     <h1><%= @teacher.name %></h1>
@@ -10,21 +10,10 @@ body>
       <article>
         <% @teacher.students.each do |student| %>
               <div class='items'>
-                <h2>
-                  <%= student.name %>
-                </h2>
-                <p>
-                  Age:
-                  <%= student.age %>
-                </p>
-                <p>
-                  Student ID:
-                  <code><%= student.id %></code>
-                </p>
-                <p>
-                  School ID:
-                  <code><%= student.school_id %></code>
-                </p>
+                <h2><%= student.name %></h2>
+                <p>Age: <%= student.age %></p>
+                <p>Student ID: <code><%= student.id %></code></p>
+                <p>School ID: <code><%= student.school_id %></code></p>
               </div>
           <hr style='border: none;' />
         <% end %>
