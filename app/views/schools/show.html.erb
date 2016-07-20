@@ -4,9 +4,7 @@
     <h1><%= @school.name %></h1>
   </span>
 
-  <span id="school-show-controls">
-
-  </span>
+  <span id="school-show-controls"></span>
 
   <section class="content-left">
 
@@ -31,21 +29,10 @@
         <% @school.teachers.each do |teacher| %>
           <%= link_to teacher_path(teacher_id: teacher.id), :class => 'button white' do %>
               <div class='items'>
-                <h2>
-                  <%= teacher.name %>
-                </h2>
-                <p>
-                  Age:
-                  <%= teacher.age %>
-                </p>
-                <p>
-                  Teacher ID:
-                  <code><%= teacher.id %></code>
-                </p>
-                <p>
-                  School ID:
-                  <code><%= teacher.school_id %></code>
-                </p>
+                <h2><%= teacher.name %></h2>
+                <p>Age: <%= teacher.age %></p>
+                <p>Teacher ID: <code><%= teacher.id %></code></p>
+                <p>School ID: <code><%= teacher.school_id %></code></p>
               </div>
           <hr style='border: none;' />
           <% end %>
@@ -63,25 +50,11 @@
       <article>
         <% @school.students.each do |student| %>
               <div class='items'>
-                <h2>
-                  <%= student.name %>
-                </h2>
-                <p>
-                  Age:
-                  <%= student.age %>
-                </p>
-                <p>
-                  Student ID:
-                  <code><%= student.id %></code>
-                </p>
-                <p>
-                  School ID:
-                  <code><%= student.school_id %></code>
-                </p>
-                <p>
-                  Teacher ID:
-                  <code><%= student.teacher_id %></code>
-                </p>
+                <h2><%= student.name %></h2>
+                <p>Age: <%= student.age %></p>
+                <p>Student ID: <code><%= student.id %></code></p>
+                <p>School ID: <code><%= student.school_id %></code></p>
+                <p>Teacher ID: <code><%= student.teacher_id %></code></p>
               </div>
           <hr style='border: none;' />
         <% end %>
@@ -95,5 +68,4 @@
     </div>
 
   </section>
-
 </body>
