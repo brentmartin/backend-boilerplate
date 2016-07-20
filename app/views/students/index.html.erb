@@ -1,0 +1,30 @@
+<body>
+
+  <span id="student-index-display">
+    <h1>Students Dashboard</h1>
+  </span>
+
+  <section class="content-right">
+    <aside>
+      <div class='side-items'>
+        <p class="read-more">Welcome Admin</p>
+        <%= form_for(:student, :url => {:action => 'create'}) do |f| %>
+          <% render(:partial => "form", :locals => {:f => f}) %>
+        <% end %>
+      </div>
+    </aside>
+
+    <article>
+      <% @students.each do |student| %>
+        <%= link_to student_path(id: student.id), :class => 'button white' do %>
+            <div class='items'>
+              <h2><%= student.name %></h2>
+            </div>
+        <hr style='border: none;' />
+        <% end %>
+      <% end %>
+    </article>
+
+  </section>
+
+</body>
