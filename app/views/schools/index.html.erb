@@ -7,12 +7,10 @@
   <section class="content-right">
     <aside>
       <div class='side-items'>
-
         <p class="read-more">Welcome Admin</p>
         <%= form_for(:school, :url => {:action => 'create'}) do |f| %>
           <% render(:partial => "form", :locals => {:f => f}) %>
         <% end %>
-
       </div>
     </aside>
 
@@ -24,22 +22,10 @@
                 <%= school.name %>
                 <small class="location"><%= school.location %></small>
               </h2>
-              <p>
-                School Motto:
-                <%= school.motto %>
-              </p>
-              <p>
-                School ID:
-                <%= school.id %>
-              </p>
-              <p>
-                Number of teachers:
-                <%= school.teachers.count %>
-              </p>
-              <p>
-                Number of students:
-                <%= school.students.count %>
-              </p>
+              <p>School Motto: <%= school.motto %></p>
+              <p>School ID: <%= school.id %></p>
+              <p>Number of teachers: <%= school.teachers.count %></p>
+              <p>Number of students: <%= school.students.count %></p>
             </div>
         <hr style='border: none;' />
         <% end %>
