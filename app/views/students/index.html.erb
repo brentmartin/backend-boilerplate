@@ -17,14 +17,14 @@
     <article>
       <% @students.each do |student| %>
         <%= link_to student_path(id: student.id), :class => 'button white' do %>
-            <div class='items'>
-              <h2><%= student.name %></h2>
-              <p>School: <%= student.school.name %></p>
-              <p>Teacher Name: <%= student.teacher.name %></p>
-              <p>Student Age: <%= student.age %></p>
-              <p>Student ID: <%= student.id %></p>
-            </div>
-        <hr style='border: none;' />
+          <div class='items'>
+            <h2><%= student.name %></h2>
+            <p>School: <%= student.school.name %></p>
+            <p>Teacher Name: <%= student.teacher.name %></p>
+            <p>Student Age: <%= student.age %></p>
+            <p>Student ID: <%= student.id %></p>
+          </div>
+          <hr style='border: none;' />
         <% end %>
       <% end %>
     </article>
