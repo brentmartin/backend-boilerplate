@@ -15,9 +15,15 @@
     </aside>
 
     <article>
+      <% @teachers.each do |teacher| %>
           <div class='items'>
+            <h2><%= teacher.name %></h2>
+            <p>School: <%= teacher.school.name %></p>
+            <p>Teacher Age: <%= teacher.age %></p>
+            <p>Teacher ID: <%= teacher.id %></p>
           </div>
           <hr style='border: none;' />
+      <% end %>
     </article>
 
   </section>
