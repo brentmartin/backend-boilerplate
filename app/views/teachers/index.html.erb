@@ -16,6 +16,7 @@
 
     <article>
       <% @teachers.each do |teacher| %>
+        <%= link_to teacher_path(id: teacher.id), :class => 'button white' do %>
           <div class='items'>
             <h2><%= teacher.name %></h2>
             <p>School: <%= teacher.school.name %></p>
@@ -23,6 +24,7 @@
             <p>Teacher ID: <%= teacher.id %></p>
           </div>
           <hr style='border: none;' />
+        <% end %>
       <% end %>
     </article>
 
