@@ -12,15 +12,17 @@
  *
  */
 
-
+ // Bourbon
  @import "bourbon";
  @import "neat";
 
- @import url(https://fonts.googleapis.com/css?family=Roboto+Slab:700,400,300,100);
- @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic);
- @import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300);
-
+ // Stylesheets
  @import "styles";
  @import "students";
  @import "teachers";
  @import "schools";
+
+ // Fonts
+ @import url(https://fonts.googleapis.com/css?family=Roboto+Slab:700,400,300,100);
+ @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic);
+ @import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300);
