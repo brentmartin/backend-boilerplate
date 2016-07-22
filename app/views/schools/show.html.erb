@@ -28,13 +28,13 @@
       <article>
         <% @school.teachers.each do |teacher| %>
           <%= link_to teacher_path(teacher_id: teacher.id), :class => 'button white' do %>
-              <div class='items'>
-                <h2><%= teacher.name %></h2>
-                <p>Age: <%= teacher.age %></p>
-                <p>Teacher ID: <code><%= teacher.id %></code></p>
-                <p>School ID: <code><%= teacher.school_id %></code></p>
-              </div>
-          <hr style='border: none;' />
+            <div class='items'>
+              <h2><%= teacher.name %></h2>
+              <p>Age: <%= teacher.age %></p>
+              <p>Teacher ID: <code><%= teacher.id %></code></p>
+              <p>School ID: <code><%= teacher.school_id %></code></p>
+            </div>
+            <hr style='border: none;' />
           <% end %>
         <% end %>
       </article>
